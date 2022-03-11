@@ -9,7 +9,8 @@
           <h4 class="card-title">{{ title }}</h4>
           <h6 class="card-subtitle">{{ formattedDate }}</h6>
           <p class="card-text text-truncate">{{text}}</p>
-          <router-link to="/article" class="btn btn-danger">
+          <router-link :to="`/article/${id}`" class="btn btn-danger">
+
 
             <em class="bi-play"/>
           </router-link>
@@ -23,6 +24,8 @@
 export default {
   name: "Preview",
   props: {
+
+    id: Number,
     title: String,
     date: Date,
     text: String,

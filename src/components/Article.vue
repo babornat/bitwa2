@@ -1,7 +1,8 @@
 <template>
   <div class="row">
     <div class="col-md-12 offset-md-0 p-5 bg-dark text-white">
-      <h3>{{ article.title }}</h3>
+
+      <h3>{{ article.title }} #{{article.id}}</h3>
 
       <p v-html="article.text"></p>
     </div>
@@ -27,10 +28,13 @@ export default {
     }
   },
   async mounted() {
+    const id = this.$route.params.id;
     this.article = await this.getData();
   },
   methods: {
-    async getData() {
+
+    async getData(id) {
+      console.debug(id);
       return {
         image: 'https://picsum.photos/seed/picsum/360/240',
         title: 'Odkud pochází naše káva',
