@@ -1,17 +1,3 @@
-<!--<template>-->
-
-<!--</template>-->
-
-<!--<script>-->
-<!--export default {-->
-<!--  name: "NewArticle.vue"-->
-<!--}-->
-<!--</script>-->
-
-<!--<style scoped>-->
-
-<!--</style>-->
-
 <template>
   <div class="card">
     <div class="card-body">
